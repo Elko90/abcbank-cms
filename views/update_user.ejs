@@ -1,0 +1,76 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- include header -->
+
+<main id="site-main">
+    <div class="container">
+       <div class="box-nav d-flex justify-between">
+          <div class="filter">
+              <a href="/"><i class="fas fa-angle-double-left"></i>All customers</a>
+          </div>
+       </div> 
+       <div class="form-tilte text-center">
+           <h2 class="text-dark">Update customer</h2>
+           <span class="text-light">Use the below form to update an account</span>
+       </div>
+
+       <!-- add user form -->
+       <form method="POST" id="update_user">
+        <div class="new_user">
+            <div class="form-group">
+                <label for="name" class="text-light">P.no</label>
+                <input type="hidden" name="id" value="<%= user._id%>">
+                <input type="text" name="pno" value="<%= user.pno%>" placeholder="Enter your personal number">
+            </div>
+            <div class="form-group">
+                <label for="name" class="text-light">F.Name</label>
+                <input type="hidden" name="id" value="<%= user._id%>">
+                <input type="text" name="fname" value="<%= user.fname%>" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label for="name" class="text-light">L.Name</label>
+                <input type="hidden" name="id" value="<%= user._id%>">
+                <input type="text" name="lname" value="<%= user.lname%>" placeholder="Last name">
+            </div>
+            <div class="form-group">
+                <label for="name" class="text-light">D.O.B</label>
+                <input type="hidden" name="id" value="<%= user._id%>">
+                <input type="text" name="dob" value="<%= user.dob%>" placeholder="dd.mm.yyyy">
+            </div>
+            <div class="form-group">
+                <label for="name" class="text-light">City</label>
+                <input type="hidden" name="id" value="<%= user._id%>">
+                <input type="text" name="city" value="<%= user.city%>" placeholder="Enter your location">
+            </div>
+            <div class="form-group">
+                <label for="name" class="text-light">Acc.No</label>
+                <input type="hidden" name="id" value="<%= user._id%>">
+                <input type="text" name="accno" value="<%= user.accno%>" placeholder="Enter your account number">
+            </div>
+    
+            <div class="form-group">
+                <button type="submit" class="btn text-dark update">Update the customer</button>
+    
+            </div>
+    
+        </div>
+     </form>
+        
+
+      
+    </div> 
+ </main>
+
+
+
+
+
+
+
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- include footer -->
+
+
+
